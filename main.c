@@ -87,6 +87,7 @@ int main(void) {
 //   char* str2 = "abc";
 //   printf("str2 : %ld\n", (long)str2);
 
+// 얘는 주소값이 달라짐 (위 2 array랑 포함하고 있는 값이 다르기에 얘는 5바이트 공간을 가짐)
 //   char* str3 = "abcd";
 //   printf("str3 : %ld\n", (long)str3);
 
@@ -99,6 +100,8 @@ int main(void) {
 //정답: 그이유는 "abc"는 메모리 상수영역에 존재하는 임의의 array이기 때문이다.
 //아무리 변수의 이름을 달리한다고 한들, 상수영역에 존재하는 array에서 데이터를 가져오기때문에
 //"abc" 가 가지고 있는 주소값은 언제나 동일하다.
+
+//정답2: "abc" 상수지역에 4바이트 할당 받아 a, b, c, 0 저장. "abc"는 'a'를 가리키는 주소값이다.
 
   
 //   return 0;
