@@ -7,16 +7,37 @@ int get_index_of_c(char* a, char b) {
   //그러므로 arry는 주소를 보내니 주소를 받으면 됨.
 int c = -1;
 
-  for (int i = 0; a[i] != '\0'; i++ ){
+
+// a[i] = *(a + i); << 이것도 됨.
 
 
-        if (a[i] == b) {
+// for loop으로 돌리기
+//   for (int i = 0; a[i] != '\0'; i++ ){
+
+
+//         if (a[i] == b) { 
     
-            c = i;
+//             c = i;
 
-            break;
-            }
-}
+//             break;
+//             }
+// }
+
+
+//while loop으로 돌리기
+int i = 0;
+  while (a[i] != '\0'){
+
+
+    if(a[i] == b) {
+
+        c = i;
+        break;
+    }
+
+    i++;
+
+  }
 
   return c;
 
